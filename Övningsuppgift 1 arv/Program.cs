@@ -18,20 +18,20 @@ namespace Arv
 
             double area = 0;
             double circumferance = 0;
+            Shape shape = null;
 
             if (val == 1)
             {
-                Triangle triangle = new Triangle(width, height);
-                area = triangle.Area();
-                circumferance = triangle.Circumferance();
+                shape = new Triangle(width, height);
             }
 
             else if (val == 2)
             {
-                Rectangle rectangle = new Rectangle(width, height);
-                area = rectangle.Area();
-                circumferance = rectangle.Circumferance();
+                shape = new Rectangle(width, height);
             }
+
+            area = shape.Area();
+            circumferance = shape.Circumferance();
 
             Console.WriteLine("Area: " + area);
             Console.WriteLine("Omkrets: " + circumferance);

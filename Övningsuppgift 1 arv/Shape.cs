@@ -16,5 +16,15 @@ namespace Arv
             width = w;
             height = h;
         }
+
+        public virtual double Area()
+        {
+            return 0;
+        }
+
+        public virtual double Circumferance()
+        {
+            return 0;
+        }
     }
 }

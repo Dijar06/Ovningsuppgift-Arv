@@ -10,12 +10,12 @@ namespace Arv
     {
         public Rectangle(double width, double height) : base(width, height) { }
 
-        public double Area()
+        public override double Area()
         {
             return width * height;
         }
 
-        public double Circumferance()
+        public override double Circumferance()
         {
             return 2 * (width + height);
         }

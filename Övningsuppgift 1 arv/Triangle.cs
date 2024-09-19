@@ -11,12 +11,12 @@ namespace Arv
     {
         public Triangle(double width, double height) : base(width, height) { }
 
-        public double Area()
+        public override double Area()
         {
             return (width * height) / 2;
         }
 
-        public double Circumferance()
+        public override double Circumferance()
         {
             double hypotenuse = Math.Sqrt(Math.Pow(width, 2) + Math.Pow(height, 2));
             return (width + height + hypotenuse);
