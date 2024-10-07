@@ -7,26 +7,25 @@ using System.Threading.Tasks;
 
 namespace Arv
 {
-    class Triangle : IShape
+    class Cylinder : IShape
     {
-        private double width;
+        private double radie;
         private double height;
 
-        public Triangle(double width, double height)
+        public Cylinder(double radie, double height)
         {
-            this.width = width;
+            this.radie = radie;
             this.height = height;
         }
 
         public double Area()
         {
-            return (width * height) / 2;
+            return 2 * Math.PI * radie * height;
         }
 
         public double Circumferance()
         {
-            double hypotenuse = Math.Sqrt(Math.Pow(width, 2) + Math.Pow(height, 2));
-            return (width + height + hypotenuse);
+            return ((radie + radie) * 2) + (height * 2);
         }
     }
 }

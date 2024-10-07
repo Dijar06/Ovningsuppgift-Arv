@@ -6,16 +6,23 @@ using System.Threading.Tasks;
 
 namespace Arv
 {
-    class Rectangle : Shape
+    class Rectangle : IShape
     {
-        public Rectangle(double width, double height) : base(width, height) { }
+        private double width;
+        private double height;
 
-        public override double Area()
+        public Rectangle(double width, double height)
+        { 
+            this.width = width;
+            this.height = height;
+        }
+
+        public double Area()
         {
             return width * height;
         }
 
-        public override double Circumferance()
+        public double Circumferance()
         {
             return 2 * (width + height);
         }
